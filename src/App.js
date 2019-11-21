@@ -5,7 +5,6 @@ import CatList from './CatList'
 
 class App extends Component {
 
-
   componentDidMount() {
     this.props.fetchCats()
   }
@@ -14,7 +13,7 @@ class App extends Component {
     return (
       <div>
         <h1>CatBook</h1>
-        {/* add CatList component here */}
+        <CatList catPics={ this.props.catPics } />
       </div>
     );
   }
@@ -23,7 +22,7 @@ class App extends Component {
 const mapStateToProps = state => {
   return {
     catPics: state.cats,
-    loading: state.loading
+    loading: state.loading,
   }
 }
 

@@ -1,7 +1,10 @@
 import React from 'react'
 
-export const CatList = props => {
+const CatList = props => {
+
   return(
-    <img />
+    props.catPics.map(catPic => <img src={catPic.url} alt="cat" key={ catPic.id }/ >)
   )
 }
+
+export default CatList
